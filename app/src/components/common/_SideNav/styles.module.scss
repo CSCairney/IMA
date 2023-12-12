@@ -1,0 +1,43 @@
+.sideNav{
+    background-color: inherit;
+    color: white;
+    height: 100%;
+    width: 10vw;
+    border-right: white 1px solid;
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    &__branding{
+        display: grid;
+        grid-template-rows: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    &__brandingLink{
+        text-decoration: none;
+        color: inherit;
+        font-size: 15px;
+        font-weight: 600;
+        transition: color 0.3s ease-in-out;
+        &:hover{
+            color: red;
+        }
+        &--active{
+            color: white;
+        }
+        @media (max-width: 768px){
+            font-size: 10px;
+        }
+        @media (max-width: 480px){
+            font-size: 5px;
+        }
+    }
+    &__links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 25px;
+        height: 100%;
+    }
+}
