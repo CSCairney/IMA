@@ -1,0 +1,2 @@
+This will house redux store values inside the project.
+(Doesnt have to be redux just will be the user data that gives "context" to the use case on site)
