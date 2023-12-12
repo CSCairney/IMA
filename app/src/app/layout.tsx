@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.scss'
+import styles from "./layout.module.scss";
 import SideNav from '@/components/common/_SideNav/sideNav';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="navigation">
+        <nav className={styles.navigation}>
           <SideNav />
-        </div>
-        <div className="content">
+        </nav>
+        <div className={styles.content}>
           {children}
         </div>
       </body>
