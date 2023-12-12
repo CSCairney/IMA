@@ -1,9 +1,9 @@
 import React from "react";
-import "./styles.scss";
+import styles from "./styles.module.scss";
 
 const SideNav = () => {
     return (
-        <div>
+        <div className={styles.sideNav}>
             <h1>SideNav</h1>
         </div>
     );
