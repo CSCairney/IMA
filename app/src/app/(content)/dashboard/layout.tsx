@@ -1,10 +1,8 @@
-import SideNav from "@/components/common/_SideNav/sideNav";
-
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <div>
-        <SideNav />
+        <p>This is to show the dynamic page layout for the dashboard.</p>
       </div>
       <div>{children}</div>
     </div>
