@@ -1,16 +1,7 @@
-export const links =[
-        {
-            name: "Home",
-            path: "/"
-        },
-        {
-            name: "About",
-            path: "/about"
-        },
-        {
-            name: "Contact",
-            path: "/contact"
-        },
+import { NavLinks } from "../types/nav";
+
+export const NavbarLinks: NavLinks = {
+    links: [
         {
             name: "Dashboard",
             path: "/dashboard",
@@ -28,6 +19,14 @@ export const links =[
                     path: "/dashboard/stock"
                 },
             ]
-
+        },
+        {
+            name: "About",
+            path: "/about"
+        },
+        {
+            name: "Contact",
+            path: "/contact"
         }
     ]
+};

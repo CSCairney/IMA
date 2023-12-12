@@ -1,3 +1,35 @@
-.Navlink{
+.link{
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+    &:hover{
+        color: red;
+    }
+    &--active{
+        color: white;
+    }
+    @media (max-width: 768px){
+        font-size: 10px;
+    }
+    @media (max-width: 480px){
+        font-size: 5px;
+    }
+}
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+.subPathToggle {
+    &:hover{
+        color: red;
+    }
+    &--active{
+        color: white;
+    }
 }

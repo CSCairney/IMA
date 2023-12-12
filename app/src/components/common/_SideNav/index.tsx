@@ -1,18 +1,19 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { links } from "./_constants/links";
+import { NavbarLinks } from "./_constants/links";
 import Navlink from "./_NavLink";
+import Link from "next/link";
 
 const SideNav = () => {
 
     return (
         <div className={styles.sideNav}>
             <div className={styles.sideNav__branding}>
-                <h1>SideNav</h1>
+                <Link className={styles.sideNav__brandingLink} href="/">Idle Miner</Link>
             </div>
             <div className={styles.sideNav__links}>
-                {links.map((link, index) => (
-                    <Navlink key={index} name={link.name} path={link.path} />
+                {NavbarLinks.links.map((link, index) => (
+                    <Navlink key={index} name={link.name} path={link.path} subPaths={link.subPaths} />
                 ))}
             </div>
         </div>
