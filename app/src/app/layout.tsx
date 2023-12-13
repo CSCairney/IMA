@@ -1,17 +1,12 @@
+"use client";
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import styles from "./layout.module.scss";
 import SideNav from '@/components/common/_SideNav';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: {
-    template: '%s | Idle Miner App',
-    default: 'IMA Site',
-  },
-  description: 'The Offical Idle Miner App',
-};
 
 export default function RootLayout({
   children,
@@ -25,7 +20,9 @@ export default function RootLayout({
           <SideNav />
         </nav>
         <div className={styles.content}>
-          {children}
+          <Provider store={store}>
+            {children}
+          </Provider>
         </div>
       </body>
     </html>
