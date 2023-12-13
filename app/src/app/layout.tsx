@@ -1,8 +1,7 @@
 "use client";
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import styles from "./layout.module.scss";
-import SideNav from '@/components/common/_SideNav';
+import SideNav from '@/components/common/SideNav';
 import { Provider } from 'react-redux';
 import { store } from './store';
 
@@ -13,6 +12,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
