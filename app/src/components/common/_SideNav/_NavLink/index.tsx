@@ -12,7 +12,7 @@ type NavlinkProps = {
 };
 
 const Navlink: React.FC<NavlinkProps> = ({ name, path, subPaths }) => {
-    const [subPathsOpen, setSubPathsOpen] = useState(true);
+    const [subPathsOpen, setSubPathsOpen] = useState(false);
 
     const toggleSubPaths = () => {
         setSubPathsOpen(!subPathsOpen);

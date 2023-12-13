@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
+import styles from "./styles.module.scss";
 
 export const metadata: Metadata = {
     title: "About Us | Idle Miner",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   
 const About = () => {
     return (
-        <div>
+        <div className={styles.about}>
             <h1>About</h1>
         </div>
     );
