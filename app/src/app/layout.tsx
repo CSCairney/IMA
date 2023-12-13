@@ -1,10 +1,11 @@
 "use client";
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import styles from "./layout.module.scss";
 import SideNav from '@/components/common/_SideNav';
 import { Provider } from 'react-redux';
-import { store } from './store';
+import { store, useAppDispatch } from './store';
+import { useEffect } from 'react';
+import { getPersistedOverlaySettings } from '@/redux/stores/overlay/actions/overlay';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,6 +14,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(getPersistedOverlaySettings());
+  }
+    , [dispatch]);
+
   return (
     <html lang="en">
       <body className={inter.className}>
