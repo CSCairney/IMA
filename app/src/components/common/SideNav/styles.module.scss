@@ -1,12 +1,14 @@
+@use "src/styles/colors";
+
 .sideNav{
-    background-color: inherit;
+    background-color: colors.$application-navigation-background;
     color: white;
     height: 100%;
-    width: 10vw;
+    width: 100%;
     border-right: white 1px solid;
     padding: 5px;
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-columns: 10% 90%;
     &__branding{
         display: grid;
         grid-template-rows: 100%;
@@ -16,7 +18,7 @@
     &__brandingLink{
         text-decoration: none;
         color: inherit;
-        font-size: 15px;
+        font-size: 25px;
         font-weight: 600;
         transition: color 0.3s ease-in-out;
         &:hover{
@@ -25,17 +27,11 @@
         &--active{
             color: white;
         }
-        @media (max-width: 768px){
-            font-size: 10px;
-        }
-        @media (max-width: 480px){
-            font-size: 5px;
-        }
     }
     &__links{
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         justify-content: flex-start;
         gap: 25px;
         height: 100%;
