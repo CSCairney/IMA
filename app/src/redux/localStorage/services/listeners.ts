@@ -1,13 +1,17 @@
 import { createListenerMiddleware, isAnyOf } from "@reduxjs/toolkit";
-import { setOverlayState } from "../stores/overlay";
+import { clearOverlayState, setErrorLog, setErrorMessage, setIsLoading, setOverlayState } from "../../stores/overlay";
 import { RootState } from "@/app/store";
-import { settingsPersistenceService } from "../localStorage/persistence";
+import { settingsPersistenceService } from "../persistence";
 
 export const listenerMiddleware = createListenerMiddleware();
 
 listenerMiddleware.startListening({
     matcher: isAnyOf(
-      setOverlayState
+      setOverlayState,
+      setErrorMessage,
+      setErrorLog,
+      setIsLoading,
+      clearOverlayState
     ),
     effect: (_action, listenerApi) => {
       try {

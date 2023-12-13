@@ -13,6 +13,7 @@ const overlaySlice = createSlice({
     },
     setErrorMessage: (state, action: PayloadAction<string>) => {
         state.error = action.payload;
+        state.errorLog = [...state.errorLog, action.payload];
     },
     setErrorLog: (state, action: PayloadAction<string[]>) => {
         state.errorLog = action.payload;

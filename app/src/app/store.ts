@@ -1,7 +1,7 @@
 import { configureStore} from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import overlayReducer from "../redux/stores/overlay";
-import { listenerMiddleware } from "@/redux/services/listeners";
+import { listenerMiddleware } from "@/redux/localStorage/services/listeners";
 
 export function createStore(preloadedState = {}) {
     return configureStore({

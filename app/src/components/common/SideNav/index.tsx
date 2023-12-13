@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { NavbarLinks } from "./_constants/links";
-import Navlink from "./_NavLink";
+import { NavbarLinks } from "./constants/links";
+import Navlink from "./NavLink";
 import Link from "next/link";
 
 const SideNav = () => {
