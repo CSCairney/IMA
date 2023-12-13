@@ -15,15 +15,11 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav className={styles.navigation}>
-          <SideNav />
-        </nav>
-        <div className={styles.content}>
-          <Provider store={store}>
-            {children}
-          </Provider>
-        </div>
+      <body className={`${inter.className} ${styles.application}`} >
+            <SideNav />
+            <Provider store={store}>
+              {children}
+            </Provider>
       </body>
     </html>
   )
