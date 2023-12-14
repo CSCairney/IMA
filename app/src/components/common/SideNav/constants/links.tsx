@@ -3,6 +3,14 @@ import { NavLinks } from "../types/nav";
 export const NavbarLinks: NavLinks = {
     links: [
         {
+            name: "About",
+            path: "/about"
+        },
+        {
+            name: "Contact",
+            path: "/contact"
+        },
+        {
             name: "Dashboard",
             path: "/dashboard",
             subPaths: [
@@ -19,14 +27,6 @@ export const NavbarLinks: NavLinks = {
                     path: "/dashboard/stock"
                 },
             ]
-        },
-        {
-            name: "About",
-            path: "/about"
-        },
-        {
-            name: "Contact",
-            path: "/contact"
         }
     ]
 };

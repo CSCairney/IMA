@@ -15,12 +15,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.className} ${styles.application}`} >
-            <SideNav />
-            <Provider store={store}>
-              {children}
-            </Provider>
-      </body>
+      <Provider store={store}>
+        <body className={`${inter.className} ${styles.application}`} >
+              <SideNav />
+                {children}
+        </body>
+      </Provider>
     </html>
   )
 }
